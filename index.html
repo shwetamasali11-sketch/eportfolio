@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Alex Johnson – Full Stack Developer. Building beautiful, fast, and scalable web applications."/>
+  <title>Alex Johnson | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div id="cursor"></div>
+  <div id="cursorTrail"></div>
+
+  <!-- ── NAVBAR ─────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="logo">&lt;<span>AJ</span>/&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────── -->
+  <section id="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+
+    <div class="hero-left">
+      <div class="available-pill">
+        <span class="pulse-dot"></span> Available for work
+      </div>
+      <p class="greet">Hello, I'm</p>
+      <h1>Alex <span class="grad">Johnson</span></h1>
+      <div class="typer">
+        <span class="typer-prefix">I&nbsp;</span>
+        <span id="typerText"></span><span class="typer-cursor">|</span>
+      </div>
+      <p class="hero-sub">
+        Full‑stack developer passionate about building high‑performance web apps,
+        elegant UIs, and scalable back‑end systems.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn primary">View Work <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#contact"  class="btn outline">Hire Me</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hs-item"><span class="hs-num" data-to="5">0</span><sup>+</sup><small>Years Exp.</small></div>
+        <div class="hs-sep"></div>
+        <div class="hs-item"><span class="hs-num" data-to="40">0</span><sup>+</sup><small>Projects</small></div>
+        <div class="hs-sep"></div>
+        <div class="hs-item"><span class="hs-num" data-to="18">0</span><sup>+</sup><small>Clients</small></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="avatar-scene">
+        <div class="av-ring r1"></div>
+        <div class="av-ring r2"></div>
+        <div class="av-ring r3"></div>
+        <div class="av-body">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1e1040"/>
+                <stop offset="100%" stop-color="#0d0820"/>
+              </linearGradient>
+              <linearGradient id="gSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f4c28a"/>
+                <stop offset="100%" stop-color="#d4935a"/>
+              </linearGradient>
+              <linearGradient id="gShirt" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#4f46e5"/>
+              </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="99" fill="url(#gBg)" stroke="rgba(139,92,246,.25)" stroke-width="1.5"/>
+            <!-- shirt -->
+            <ellipse cx="100" cy="168" rx="52" ry="36" fill="url(#gShirt)"/>
+            <rect x="62" y="148" width="76" height="28" rx="6" fill="url(#gShirt)"/>
+            <!-- neck -->
+            <rect x="89" y="124" width="22" height="26" rx="5" fill="url(#gSkin)"/>
+            <!-- head -->
+            <ellipse cx="100" cy="104" rx="37" ry="40" fill="url(#gSkin)"/>
+            <!-- hair -->
+            <ellipse cx="100" cy="68"  rx="40" ry="20" fill="#1a0d3a"/>
+            <ellipse cx="100" cy="64"  rx="34" ry="16" fill="#2d1b69"/>
+            <!-- eyes -->
+            <ellipse cx="87"  cy="103" rx="6" ry="7" fill="white"/>
+            <ellipse cx="113" cy="103" rx="6" ry="7" fill="white"/>
+            <circle  cx="88"  cy="104" r="4"  fill="#1a0a3a"/>
+            <circle  cx="114" cy="104" r="4"  fill="#1a0a3a"/>
+            <circle  cx="89.5" cy="102.5" r="1.5" fill="white"/>
+            <circle  cx="115.5" cy="102.5" r="1.5" fill="white"/>
+            <!-- glasses -->
+            <rect x="79"  y="97" width="17" height="12" rx="4" fill="none" stroke="#a78bfa" stroke-width="1.8"/>
+            <rect x="104" y="97" width="17" height="12" rx="4" fill="none" stroke="#a78bfa" stroke-width="1.8"/>
+            <line x1="96" y1="103" x2="104" y2="103" stroke="#a78bfa" stroke-width="1.8"/>
+            <!-- smile -->
+            <path d="M88 117 Q100 127 112 117" stroke="#c17a4a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- laptop -->
+            <rect x="54" y="178" width="92" height="7" rx="3" fill="#374151"/>
+            <rect x="62" y="160" width="76" height="20" rx="4" fill="#111827"/>
+            <text x="100" y="174" text-anchor="middle" font-family="monospace" font-size="9" fill="#a78bfa">&lt;/&gt;</text>
+          </svg>
+        </div>
+        <div class="float-badge fb1">⚛ React</div>
+        <div class="float-badge fb2">⬡ Node</div>
+        <div class="float-badge fb3">🧠 AI/ML</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint">
+      <div class="scroll-wheel-anim"></div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ── ABOUT ──────────────────────────────────── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">About Me</span>
+        <h2>The Mind Behind <span class="grad">the Code</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">I'm a Full Stack Developer with <strong>5+ years</strong> crafting digital products at the intersection of technology and creativity.</p>
+          <p>My work spans pixel‑perfect frontends to robust REST/GraphQL APIs and cloud infra. I care about performance, DX, and making every millisecond count. I've shipped products serving <strong>200k+ users</strong> and guided engineering teams.</p>
+          <p>When I'm not coding, I'm contributing to open‑source, exploring generative AI, or hiking trails with my camera.</p>
+          <div class="pill-row">
+            <span class="pill">🚀 Problem Solver</span>
+            <span class="pill">🎨 Design Lover</span>
+            <span class="pill">📚 Avid Learner</span>
+            <span class="pill">🌍 Open Source</span>
+          </div>
+          <a href="#" class="btn primary mt" id="resumeBtn">
+            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+        </div>
+        <div class="about-cards reveal">
+          <div class="info-card glass">
+            <span class="ic-emoji">🎓</span>
+            <div>
+              <small>Education</small>
+              <strong>B.S. Computer Science</strong>
+              <span>Stanford University · 2019</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <span class="ic-emoji">📍</span>
+            <div>
+              <small>Location</small>
+              <strong>San Francisco, CA</strong>
+              <span>Open to Remote</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <span class="ic-emoji">💼</span>
+            <div>
+              <small>Current</small>
+              <strong>Senior Engineer</strong>
+              <span>@ TechCorp Inc.</span>
+            </div>
+          </div>
+          <div class="info-card glass">
+            <span class="ic-emoji">🌐</span>
+            <div>
+              <small>Languages</small>
+              <strong>English · Spanish</strong>
+              <span>Professional fluency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ─────────────────────────────────── -->
+  <section id="skills" class="section alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Expertise</span>
+        <h2>Skills & <span class="grad">Technologies</span></h2>
+      </div>
+      <div class="skill-tabs" id="skillTabs">
+        <button class="stab active" data-tab="fe">Frontend</button>
+        <button class="stab" data-tab="be">Backend</button>
+        <button class="stab" data-tab="dx">Tools & DevOps</button>
+      </div>
+      <div id="skillGrid" class="skill-grid"></div>
+      <div class="marquee">
+        <div class="marquee-inner" id="marqueeInner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ─────────────────────────────── -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Journey</span>
+        <h2>Work <span class="grad">Experience</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-row reveal">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+            <div class="tl-stem"></div>
+          </div>
+          <div class="tl-card glass">
+            <div class="tl-top">
+              <div>
+                <h3>Senior Full Stack Developer</h3>
+                <span class="tl-company">TechCorp Inc.</span>
+              </div>
+              <span class="tl-date">2022 – Present</span>
+            </div>
+            <p>Led development of a high-traffic SaaS platform for 200k+ users. Cut API response time by 60% via microservices refactoring. Mentored 4 engineers and shipped 12 major releases.</p>
+            <div class="chip-row">
+              <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">AWS</span><span class="chip">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-row reveal">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+            <div class="tl-stem"></div>
+          </div>
+          <div class="tl-card glass">
+            <div class="tl-top">
+              <div>
+                <h3>Full Stack Developer</h3>
+                <span class="tl-company">StartupXYZ</span>
+              </div>
+              <span class="tl-date">2020 – 2022</span>
+            </div>
+            <p>Built an AI-powered analytics dashboard from zero to production. Designed real-time pipelines handling 50M+ events/day and a custom chart library adopted by 3 enterprise clients.</p>
+            <div class="chip-row">
+              <span class="chip">Vue.js</span><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Redis</span><span class="chip">MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-row reveal">
+          <div class="tl-left">
+            <div class="tl-dot"></div>
+          </div>
+          <div class="tl-card glass">
+            <div class="tl-top">
+              <div>
+                <h3>Frontend Engineer</h3>
+                <span class="tl-company">Agency Creative</span>
+              </div>
+              <span class="tl-date">2019 – 2020</span>
+            </div>
+            <p>Delivered 15+ client sites with Lighthouse 95+ scores. Introduced a shared design-system that reduced delivery time by 35% across all projects.</p>
+            <div class="chip-row">
+              <span class="chip">React</span><span class="chip">GSAP</span><span class="chip">Figma</span><span class="chip">Webpack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────── -->
+  <section id="projects" class="section alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Portfolio</span>
+        <h2>Featured <span class="grad">Projects</span></h2>
+      </div>
+      <div class="proj-filters" id="projFilters">
+        <button class="pfbtn active" data-f="all">All</button>
+        <button class="pfbtn" data-f="fullstack">Full Stack</button>
+        <button class="pfbtn" data-f="frontend">Frontend</button>
+        <button class="pfbtn" data-f="ai">AI / ML</button>
+      </div>
+      <div class="proj-grid" id="projGrid"></div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="https://github.com" target="_blank" class="btn outline">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          More on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">Get In Touch</span>
+        <h2>Let's Build Something <span class="grad">Amazing</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>Have a project idea, job opportunity, or just want to say hello? My inbox is always open — I reply within 24 hours.</p>
+          <div class="clink-list">
+            <a href="mailto:alex@example.com" class="clink">
+              <div class="clink-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+              </div>
+              <div><small>Email</small><strong>alex@example.com</strong></div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="clink">
+              <div class="clink-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div><small>LinkedIn</small><strong>/in/alexjohnson</strong></div>
+            </a>
+            <a href="https://github.com" target="_blank" class="clink">
+              <div class="clink-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div><small>GitHub</small><strong>@alexjohnson</strong></div>
+            </a>
+          </div>
+        </div>
+
+        <form id="contactForm" class="contact-form glass reveal" novalidate>
+          <div class="form-row">
+            <div class="fgroup">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" placeholder="Your name" autocomplete="name"/>
+            </div>
+            <div class="fgroup">
+              <label for="femail">Email</label>
+              <input type="email" id="femail" placeholder="you@email.com" autocomplete="email"/>
+            </div>
+          </div>
+          <div class="fgroup">
+            <label for="fsubject">Subject</label>
+            <input type="text" id="fsubject" placeholder="What's this about?"/>
+          </div>
+          <div class="fgroup">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" rows="5" placeholder="Tell me about your project…"></textarea>
+          </div>
+          <button type="submit" class="btn primary full" id="submitBtn">
+            <span id="submitLabel">Send Message</span>
+            <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div class="form-ok" id="formOk">
+            🎉 Message sent! I'll reply within 24 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#hero" class="logo">&lt;<span>AJ</span>/&gt;</a>
+          <p>Building the web, one component at a time. Passionate about clean code & beautiful design.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <div class="social-row">
+            <a href="https://github.com"   target="_blank" aria-label="GitHub"   class="soc">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="soc">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://twitter.com"  target="_blank" aria-label="Twitter"  class="soc">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Alex Johnson · Crafted with <span style="color:#e879f9">♥</span> and ☕</p>
+        <p>HTML · CSS · JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
